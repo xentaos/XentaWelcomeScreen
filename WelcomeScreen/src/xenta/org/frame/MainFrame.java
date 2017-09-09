@@ -5,15 +5,10 @@
  */
 package xenta.org.frame;
 
-import java.awt.Image;
-import java.awt.Toolkit;
+import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.Timer;
 
 /**
  *
@@ -24,10 +19,13 @@ public class MainFrame extends javax.swing.JFrame {
     ExecuteBash exe=new ExecuteBash();
     Slide slide=new Slide();
     BufferedImage img=null;
+    Timer timer=null;
     /**
      * Creates new form Main
      */
     public MainFrame() {
+        
+        
         initComponents();
         
     }
@@ -42,219 +40,219 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         panelAtas = new javax.swing.JPanel();
-        labelLogo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        nextButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        logoSlide = new javax.swing.JLabel();
+        labelParagraf = new javax.swing.JLabel();
+        nextLabel = new javax.swing.JLabel();
+        previousLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setUndecorated(true);
         setResizable(false);
 
-        panelAtas.setBackground(java.awt.Color.darkGray);
+        panelAtas.setBackground(Color.decode("#1A1A1A"));
         panelAtas.setForeground(new java.awt.Color(255, 255, 255));
-
-        labelLogo.setPreferredSize(new java.awt.Dimension(labelLogo.getWidth(), labelLogo.getHeight()));
-
-        try{
-            img=ImageIO.read(getClass().getResource("../img/Xentaos.jpg"));
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-        //Image dimg=img.getScaledInstance(151,151,Image.SCALE_SMOOTH);
-        ImageIcon imageIcon=new ImageIcon("../img/njay.jpeg");
-        labelLogo.setIcon(imageIcon);
 
         jLabel1.setFont(new java.awt.Font("Curlz MT", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("WELCOME TO XENTA OS");
+        jLabel1.setText("XENTA OS 1.3 LTS 'Arok'");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/LOGO.png"))); // NOI18N
+
+        jPanel1.setBackground(Color.decode("#212121"));
+        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
+
+        logoSlide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/SLIDE1.png"))); // NOI18N
+
+        labelParagraf.setText(slide.setParagraf());
+        labelParagraf.setForeground(new java.awt.Color(255, 255, 255));
+
+        nextLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/NEXT.png"))); // NOI18N
+        nextLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextLabelMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nextLabelMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nextLabelMouseEntered(evt);
+            }
+        });
+
+        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/BACK.png"))); // NOI18N
+        previousLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                previousLabelMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                previousLabelMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                previousLabelMouseEntered(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(logoSlide, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(labelParagraf, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(107, 107, 107))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(previousLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nextLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65)))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(logoSlide, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelParagraf, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 33, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(previousLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nextLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(29, 29, 29))
+        );
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/chatroom.png"))); // NOI18N
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("jLabel3");
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("jLabel4");
-
-        jButton1.setText("Close");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox1.setText("Show this dialog at start up");
-
-        jButton2.setText("LS");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        nextButton.setText("next");
-        nextButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/logo_header.png"))); // NOI18N
+        jLabel2.setText("Edisi Cinnamon 64bit");
 
         javax.swing.GroupLayout panelAtasLayout = new javax.swing.GroupLayout(panelAtas);
         panelAtas.setLayout(panelAtasLayout);
         panelAtasLayout.setHorizontalGroup(
             panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addGap(14, 14, 14))
+                        .addComponent(jLabel2)
+                        .addGap(257, 257, 257))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(308, 308, 308))))
-            .addGroup(panelAtasLayout.createSequentialGroup()
-                .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelAtasLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(nextButton))
-                    .addGroup(panelAtasLayout.createSequentialGroup()
-                        .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelAtasLayout.createSequentialGroup()
-                                .addGap(187, 187, 187)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelAtasLayout.createSequentialGroup()
-                                .addGap(229, 229, 229)
-                                .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel2))
-                                .addGap(65, 65, 65)
-                                .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton2)
-                                    .addComponent(jButton3)))
-                            .addGroup(panelAtasLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(labelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 232, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(276, 276, 276))
         );
         panelAtasLayout.setVerticalGroup(
             panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAtasLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(33, 33, 33)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelAtasLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4))
-                    .addComponent(jButton3))
-                .addGap(18, 18, 18)
-                .addComponent(labelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nextButton)
+                .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jCheckBox1))
-                .addGap(23, 23, 23))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelAtas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelAtas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelAtas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+            .addComponent(panelAtas, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void nextLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextLabelMouseEntered
         // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
+        nextLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("../img/NEXT-KECIL.png")));
+        
+    }//GEN-LAST:event_nextLabelMouseEntered
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void nextLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextLabelMouseExited
         // TODO add your handling code here:
-        perintah=new String[]{"kwrite"};
-        exe.setPerintah(perintah);
-        try {
-            exe.eksekusi();
-        } catch (IOException ex) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
+        nextLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/NEXT.png")));
+    }//GEN-LAST:event_nextLabelMouseExited
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void nextLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextLabelMouseClicked
         // TODO add your handling code here:
-        perintah=new String[]{"kcalc"};
-        exe.setPerintah(perintah);
-        try {
-            exe.eksekusi();
-        } catch (IOException ex) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        
+            if(nextLabel==evt.getSource()){
+                if(slide.isImageMentok()){
+                    slide.next+=1;
+                    while(slide.next>=slide.gambar.length || slide.next>=slide.paragraf.length){
+                        slide.next=0;
+                    }
+                
+                }
+                
+            ImageIcon imageIcon=new ImageIcon(getClass().getResource(slide.getGambar()));
+            logoSlide.setIcon(imageIcon);
+            labelParagraf.setText(slide.setParagraf());
             
-        if(evt.getActionCommand().equals("next")){
+            } else {
+                
+            }
+
+     
+    }//GEN-LAST:event_nextLabelMouseClicked
+
+    private void previousLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previousLabelMouseClicked
+        // TODO add your handling code here:
+        if(previousLabel==evt.getSource()){
             if(slide.isImageMentok()){
-                slide.next+=1;
-                while(slide.next>=slide.gambar.length){
+                slide.next-=1;
+                while(slide.next>=slide.gambar.length || slide.next>=slide.paragraf.length 
+                        ){
                     slide.next=0;
                 }
-                for(int x=0,y=0;x<500;x++){
-            labelLogo.setLocation(x,280 );
+                while(slide.next==-1){
+                    slide.next=4;
+                }
+                
             }
-            }
-            
             System.out.println(slide.gambar.length);
             ImageIcon imageIcon=new ImageIcon(getClass().getResource(slide.getGambar()));
-            labelLogo.setIcon(imageIcon);
-              
-           /// System.out.println(dimg.getSource());
+            logoSlide.setIcon(imageIcon);
+            labelParagraf.setText(slide.setParagraf());
+            
+        } else {
         }
         
-        
-    }//GEN-LAST:event_nextButtonActionPerformed
+    }//GEN-LAST:event_previousLabelMouseClicked
+
+    private void previousLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previousLabelMouseExited
+        // TODO add your handling code here:
+        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("../img/BACK.png")));
+    }//GEN-LAST:event_previousLabelMouseExited
+
+    private void previousLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previousLabelMouseEntered
+        // TODO add your handling code here:
+        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("../img/BACK-KECIL.png")));
+    }//GEN-LAST:event_previousLabelMouseEntered
 
     /**
      * @param args the command line arguments
@@ -290,19 +288,16 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    protected javax.swing.JLabel labelLogo;
-    private javax.swing.JButton nextButton;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelParagraf;
+    private javax.swing.JLabel logoSlide;
+    private javax.swing.JLabel nextLabel;
     private javax.swing.JPanel panelAtas;
+    private javax.swing.JLabel previousLabel;
     // End of variables declaration//GEN-END:variables
 }
