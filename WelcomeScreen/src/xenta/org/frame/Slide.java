@@ -24,12 +24,12 @@ public class Slide extends JLabel{
     };
     String paragraf[]=new String[]{
         "<html>"
-            + "<p>"
-            + "Selamat Datang\n" +
-"Xenta OS adalah Distro Linux Lokal Indonesia dikembangkan oleh\n" +
-"Organisasi non-profit. Yang Bertujuan Sebagai Alternatif Sistem \n" +
-"Operasi Bebas, Legal dan Gratis."
-            + "</p>"
+            + ""
+            + "Selamat Datang<br>\n" +
+"Xenta OS adalah Distro Linux Lokal Indonesia dikembangkan oleh<br>\n" +
+"Organisasi non-profit. Yang Bertujuan Sebagai Alternatif Sistem <br>\n" +
+"Operasi Bebas, Legal dan Gratis.<br>"
+            + ""
             + "</html>",
         "<html>"
             + "<p>"
@@ -41,26 +41,26 @@ public class Slide extends JLabel{
             + "</html>",
         "<html>"
             + "<p>"
-            + "Komunitas\n" +
-"Xenta OS memiliki wadah Untuk Berkomunikasi dan Berdiskusi \n" +
-"Seputar Linux & Pemecahan Masalah Hardware / Software.\n" +
-"Berkomunitas Facebook Group & Telegram Group. "
+            + "Komunitas<br>\n" +
+"Xenta OS memiliki wadah Untuk Berkomunikasi dan Berdiskusi<br> \n" +
+"Seputar Linux & Pemecahan Masalah Hardware / Software.<br>\n" +
+"Berkomunitas Facebook Group & Telegram Group.<br> "
             + "</p>"
             + "</html>",
         "<html>"
             + "<p>"
-            + "Proyek\n" +
-"Xenta OS sebuah proyek kerja secara terbuka,\n" +
-"yang dikerjakan serius berdasarkan hobi.\n" +
-"Lengkapnya Kunjungi http://dev.xentaos.org/ ."
+            + "Proyek<br>\n" +
+"Xenta OS sebuah proyek kerja secara terbuka,<br>\n" +
+"yang dikerjakan serius berdasarkan hobi.<br>\n" +
+"Lengkapnya Kunjungi http://dev.xentaos.org/ .<br>"
             + "</p>"
             + "</html>",
         "<html>"
             + "<p>"
-            + "Kontribusi\n" +
-"Xenta OS terbuka bagi siapapun untuk bergabung \n" +
-"mengembangkan, berkreasi dan berinovasi dalam sistem operasi.\n" +
-"Lengkapnya Kunjungi http://dev.xentaos.org/p/join.html/ ."
+            + "Kontribusi<br>\n" +
+"Xenta OS terbuka bagi siapapun untuk bergabung<br> \n" +
+"mengembangkan, berkreasi dan berinovasi dalam sistem operasi.<br>\n" +
+"Lengkapnya Kunjungi http://dev.xentaos.org/p/join.html/ .<br>"
             + "</p>"
             + "</html>"
         
