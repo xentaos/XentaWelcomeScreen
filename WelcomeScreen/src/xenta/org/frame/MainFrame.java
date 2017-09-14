@@ -228,7 +228,7 @@ public class MainFrame extends javax.swing.JFrame {
                 }
                 
             }
-            System.out.println(slide.gambar.length);
+            
             ImageIcon imageIcon=new ImageIcon(getClass().getResource(slide.getGambar()));
             logoSlide.setIcon(imageIcon);
             labelParagraf.setText(slide.setParagraf());
