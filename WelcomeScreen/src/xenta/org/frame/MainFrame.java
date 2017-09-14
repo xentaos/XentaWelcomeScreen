@@ -56,7 +56,7 @@ public class MainFrame extends javax.swing.JFrame {
         panelAtas.setBackground(Color.decode("#1A1A1A"));
         panelAtas.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Curlz MT", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("XENTA OS 1.3 LTS 'Arok'");
 
@@ -141,14 +141,14 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(205, 205, 205))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(110, 110, 110))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(221, 221, 221))))
+                        .addGap(221, 221, 221))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAtasLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(210, 210, 210))))
         );
         panelAtasLayout.setVerticalGroup(
             panelAtasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,7 +159,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45))
         );
@@ -182,7 +182,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void nextLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextLabelMouseEntered
         // TODO add your handling code here:
         
-        nextLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("../img/NEXT-KECIL.png")));
+        nextLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/NEXT-KECIL.png")));
         
     }//GEN-LAST:event_nextLabelMouseEntered
 
@@ -240,12 +240,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void previousLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previousLabelMouseExited
         // TODO add your handling code here:
-        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("../img/BACK.png")));
+        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/BACK.png")));
     }//GEN-LAST:event_previousLabelMouseExited
 
     private void previousLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previousLabelMouseEntered
         // TODO add your handling code here:
-        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("../img/BACK-KECIL.png")));
+        previousLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/BACK-KECIL.png")));
     }//GEN-LAST:event_previousLabelMouseEntered
 
     /**
