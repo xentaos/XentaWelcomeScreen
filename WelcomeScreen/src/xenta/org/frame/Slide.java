@@ -13,11 +13,11 @@ import javax.swing.JLabel;
  */
 public class Slide extends JLabel{
     String gambar[]=new String[]{
-        "../img/SLIDE1.png",
-        "../img/SLIDE2.png",
-        "../img/SLIDE3.png",
-        "../img/SLIDE4.png",
-        "../img/SLIDE5.png"
+        "/xenta/org/img/SLIDE1.png",
+        "/xenta/org/img/SLIDE2.png",
+        "/xenta/org/img/SLIDE3.png",
+        "/xenta/org/img/SLIDE4.png",
+        "/xenta/org/img/SLIDE5.png"
             //isi URL gambar2 disini.. pixel harus sama.
     };
     String paragraf[]=new String[]{
