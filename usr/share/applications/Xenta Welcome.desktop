@@ -6,5 +6,5 @@ Exec=xentawelcome
 Icon=xentawelcome
 Type=Application
 StartupNotify=false
-Categories=Accessories;
+Categories=System;Settings;
 Terminal=false
