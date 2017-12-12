@@ -88,11 +88,11 @@ public class MainFrame extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 previousLabelMouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                previousLabelMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 previousLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                previousLabelMouseExited(evt);
             }
         });
 
@@ -128,7 +128,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Edisi Cinnamon 64bit");
+        jLabel2.setText("Edisi Cinnamon 64 bit");
 
         javax.swing.GroupLayout panelAtasLayout = new javax.swing.GroupLayout(panelAtas);
         panelAtas.setLayout(panelAtasLayout);

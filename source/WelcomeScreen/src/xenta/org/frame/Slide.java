@@ -23,39 +23,44 @@ public class Slide extends JLabel{
     String paragraf[]=new String[]{
         "<html>"
             + ""
-            + "Selamat Datang<br>\n" +
+            + "Selamat Datang<br>\n"
+            + "<p>" +           
 "Xenta OS adalah Distro Linux Lokal Indonesia dikembangkan oleh<br>\n" +
 "Organisasi non-profit. Yang Bertujuan Sebagai Alternatif Sistem <br>\n" +
 "Operasi Bebas, Legal dan Gratis.<br>"
-            + ""
+            + "</p>"
             + "</html>",
         "<html>"
-            + "<p>"
-            + "Fitur Baru<br>\n" +
+            + ""
+            + "Fitur Baru<br>\n"
+            + "<p>" +
 "* Perbaikan Bugs dan Perapihan Paket-Paket.<br>\n" +
 "* Edisi LTS dukungan panjang sampai tahun 2021.<br>\n" +
 "* Merapihkan Aplikasi Bawan dan Perbaikan Theme.<br>"
             + "</p>"
             + "</html>",
         "<html>"
-            + "<p>"
-            + "Komunitas<br>\n" +
+            + ""
+            + "Komunitas<br>\n"
+            + "<p>" +
 "Xenta OS memiliki wadah Untuk Berkomunikasi dan Berdiskusi<br> \n" +
 "Seputar Linux & Pemecahan Masalah Hardware / Software.<br>\n" +
 "Berkomunitas Facebook Group & Telegram Group.<br> "
             + "</p>"
             + "</html>",
         "<html>"
-            + "<p>"
-            + "Proyek<br>\n" +
+            + ""
+            + "Proyek<br>\n"
+            + "<p>" +
 "Xenta OS sebuah proyek kerja secara terbuka,<br>\n" +
 "yang dikerjakan serius berdasarkan hobi.<br>\n" +
 "Lengkapnya Kunjungi http://dev.xentaos.org/ .<br>"
             + "</p>"
             + "</html>",
         "<html>"
-            + "<p>"
-            + "Kontribusi<br>\n" +
+            + ""
+            + "Kontribusi<br>\n"
+            + "<p>" +
 "Xenta OS terbuka bagi siapapun untuk bergabung<br> \n" +
 "mengembangkan, berkreasi dan berinovasi dalam sistem operasi.<br>\n" +
 "Lengkapnya Kunjungi http://dev.xentaos.org/p/join.html/ .<br>"
