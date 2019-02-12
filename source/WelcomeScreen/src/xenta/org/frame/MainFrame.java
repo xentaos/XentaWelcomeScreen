@@ -58,7 +58,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("XENTA OS 1.3 LTS 'Arok'");
+        jLabel1.setText("XENTA OS 2.0 LTS 'Batik'");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xenta/org/img/LOGO.png"))); // NOI18N
 

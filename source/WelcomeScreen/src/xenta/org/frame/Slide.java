@@ -54,7 +54,7 @@ public class Slide extends JLabel{
             + "<p>" +
 "Xenta OS sebuah proyek kerja secara terbuka,<br>\n" +
 "yang dikerjakan serius berdasarkan hobi.<br>\n" +
-"Lengkapnya Kunjungi http://dev.xentaos.org/ .<br>"
+"Lengkapnya Kunjungi http://www.xentaos.com/ .<br>"
             + "</p>"
             + "</html>",
         "<html>"
@@ -63,7 +63,7 @@ public class Slide extends JLabel{
             + "<p>" +
 "Xenta OS terbuka bagi siapapun untuk bergabung<br> \n" +
 "mengembangkan, berkreasi dan berinovasi dalam sistem operasi.<br>\n" +
-"Lengkapnya Kunjungi http://dev.xentaos.org/p/join.html/ .<br>"
+"Lengkapnya Kunjungi http://www.xentaos.com/p/join.html/ .<br>"
             + "</p>"
             + "</html>"
         

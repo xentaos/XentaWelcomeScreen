@@ -9,3 +9,6 @@ debian/debhelper-build-stamp
 # Directory Paket
 debian/xenta-welcome-screen
 #gitpush
+/source/WelcomeScreen/nbproject/private/
+/source/WelcomeScreen/build/
+/source/WelcomeScreen/dist/
