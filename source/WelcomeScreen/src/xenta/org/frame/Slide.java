@@ -22,49 +22,34 @@ public class Slide extends JLabel{
     };
     String paragraf[]=new String[]{
         "<html>"
-            + ""
-            + "Selamat Datang<br>\n"
-            + "<p>" +           
-"Xenta OS adalah Distro Linux Lokal Indonesia dikembangkan oleh<br>\n" +
-"Organisasi non-profit. Yang Bertujuan Sebagai Alternatif Sistem <br>\n" +
+            +"<h1>Selamat Datang</h1>\n"+
+"Xenta OS adalah Distro Linux Lokal Indonesia dikembangkan oleh \n" +
+"Organisasi non-profit. Yang Bertujuan Sebagai Alternatif Sistem \n" +
 "Operasi Bebas, Legal dan Gratis.<br>"
-            + "</p>"
             + "</html>",
         "<html>"
-            + ""
-            + "Fitur Baru<br>\n"
-            + "<p>" +
+            + "<h1>Fitur Baru</h1>\n"+
 "* Perbaikan Bugs dan Perapihan Paket-Paket.<br>\n" +
 "* Edisi LTS dukungan panjang sampai tahun 2021.<br>\n" +
 "* Merapihkan Aplikasi Bawan dan Perbaikan Theme.<br>"
-            + "</p>"
             + "</html>",
         "<html>"
-            + ""
-            + "Komunitas<br>\n"
-            + "<p>" +
+            + "<h1>Komunitas</h1>\n"+
 "Xenta OS memiliki wadah Untuk Berkomunikasi dan Berdiskusi<br> \n" +
 "Seputar Linux & Pemecahan Masalah Hardware / Software.<br>\n" +
 "Berkomunitas Facebook Group & Telegram Group.<br> "
-            + "</p>"
             + "</html>",
         "<html>"
-            + ""
-            + "Proyek<br>\n"
-            + "<p>" +
-"Xenta OS sebuah proyek kerja secara terbuka,<br>\n" +
+            + "<h1>Proyek</h1>\n"+
+"Xenta OS sebuah proyek kerja secara terbuka,\n" +
 "yang dikerjakan serius berdasarkan hobi.<br>\n" +
 "Lengkapnya Kunjungi http://www.xentaos.com/ .<br>"
-            + "</p>"
             + "</html>",
         "<html>"
-            + ""
-            + "Kontribusi<br>\n"
-            + "<p>" +
-"Xenta OS terbuka bagi siapapun untuk bergabung<br> \n" +
+            + "<h1>Kontribusi</h1>\n"+
+"Xenta OS terbuka bagi siapapun untuk bergabung\n" +
 "mengembangkan, berkreasi dan berinovasi dalam sistem operasi.<br>\n" +
 "Lengkapnya Kunjungi http://www.xentaos.com/p/join.html/ .<br>"
-            + "</p>"
             + "</html>"
         
     };
