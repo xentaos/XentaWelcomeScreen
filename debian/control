@@ -7,8 +7,14 @@ Standards-Version: 3.9.7
 Homepage: https://github.com/xentaoslinux/xenta-welcome-screen
 Vcs-Browser: https://github.com/xentaoslinux/xenta-welcome-screen.git
 
-Package: xenta-welcome-screen
+Package: xenta-welcome-screen-cinnamon
 Architecture: all
 Depends: xenta-x-icons, xenta-icons
 Description: Paket Bawaan Sambutan Desktop Xenta OS.
- Bawaan Sambutan Desktop Xenta OS semua edisi.
+ Bawaan Sambutan Desktop Xenta OS Cinnamon edisi.
+
+Package: xenta-welcome-screen-xfce
+Architecture: all
+Depends: xenta-x-icons, xenta-icons
+Description: Paket Bawaan Sambutan Desktop Xenta OS.
+ Bawaan Sambutan Desktop Xenta OS Xfce edisi.

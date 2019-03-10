@@ -1,0 +1,2 @@
+?package(xentawelcome):needs="X11" section="Applications/Aplications"\
+  title="xentawelcome" command="/usr/bin/xentawelcome"
