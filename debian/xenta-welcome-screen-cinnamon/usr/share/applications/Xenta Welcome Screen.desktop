@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Xenta Welcome Screen
+GenericName=xentawelcome
+Comment=Aplikasi Sambutan Xenta OS
+Exec=xentawelcome
+Icon=start-here
+Type=Application
+StartupNotify=false
+Categories=System;Settings;
+Terminal=false
