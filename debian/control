@@ -1,14 +1,24 @@
 Source: xenta-welcome-screen
 Section: admins
 Priority: optional
-Maintainer: Dindin Hernawan (Xenta OS) <root@dev.xentaos.org>
+Maintainer: Dindin Hernawan (Xenta OS) <dindin_hernawan@yahoo.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.7
-Homepage: https://github.com/xentaos/xenta-welcome-screen
-Vcs-Browser: https://github.com/xentaos/xenta-welcome-screen.git
+Homepage: https://github.com/xentaoslinux/xenta-welcome-screen
+Vcs-Browser: https://github.com/xentaoslinux/xenta-welcome-screen.git
 
-Package: xenta-welcome-screen
+Package: xenta-welcome-screen-cinnamon
 Architecture: all
 Depends: xenta-x-icons, xenta-icons
+Conflicts: xenta-welcome-screen, xenta-welcome-screen-cinnamon64
+Replaces: xenta-welcome-screen
 Description: Paket Bawaan Sambutan Desktop Xenta OS.
- Bawaan Sambutan Desktop Xenta OS semua edisi.
+ Bawaan Sambutan Desktop Xenta OS Cinnamon edisi.
+
+Package: xenta-welcome-screen-xfce
+Architecture: all
+Conflicts: xenta-welcome-screen
+Replaces: xenta-welcome-screen
+Depends: xenta-x-icons, xenta-icons
+Description: Paket Bawaan Sambutan Desktop Xenta OS.
+ Bawaan Sambutan Desktop Xenta OS Xfce edisi.

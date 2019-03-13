@@ -1,0 +1,14 @@
+Package: xenta-welcome-screen-xfce
+Source: xenta-welcome-screen
+Version: 1.3.3+xentaos2
+Architecture: all
+Maintainer: Dindin Hernawan (Xenta OS) <dindin_hernawan@yahoo.com>
+Installed-Size: 86
+Depends: xenta-x-icons, xenta-icons
+Conflicts: xenta-welcome-screen
+Replaces: xenta-welcome-screen
+Section: admins
+Priority: optional
+Homepage: https://github.com/xentaoslinux/xenta-welcome-screen
+Description: Paket Bawaan Sambutan Desktop Xenta OS.
+ Bawaan Sambutan Desktop Xenta OS Xfce edisi.
